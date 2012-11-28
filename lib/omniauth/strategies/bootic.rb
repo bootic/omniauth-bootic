@@ -3,15 +3,18 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class Bootic < OmniAuth::Strategies::OAuth2
+      
+      BOOTIC_API_URL = (ENV['BOOTIC_API_URL'] || "https://api.bootic.net")
+      
       # Give your strategy a name.
       option :name, "Bootic"
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
       option :client_options, {
-        site: "https://api.bootic.net",
-        authorize_url: 'https://api.bootic.net/oauth/authorize',
-        token_url: 'https://api.bootic.net/oauth/token'
+        site: BOOTIC_API_URL,
+        authorize_url: "#{BOOTIC_API_URL}/oauth/authorize",
+        token_url: "#{BOOTIC_API_URL}/oauth/token"
       }
       
       def request_phase
@@ -49,6 +52,7 @@ module OmniAuth
       def raw_info
         @raw_info ||= access_token.get('/oauth/me').parsed
       end
+      
     end
   end
 end
