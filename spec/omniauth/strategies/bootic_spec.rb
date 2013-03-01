@@ -7,7 +7,7 @@ describe OmniAuth::Strategies::Bootic do
 
   context "client options" do
     it 'should have correct site' do
-      subject.options.client_options.site.should eq("https://api.bootic.net")
+      subject.options.client_options.site.should eq("https://api.bootic.net/v1")
     end
 
     it 'should have correct authorize url' do

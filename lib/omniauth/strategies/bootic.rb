@@ -5,7 +5,7 @@ module OmniAuth
     class Bootic < OmniAuth::Strategies::OAuth2
       
       BOOTIC_AUTH_URL = (ENV['BOOTIC_AUTH_URL'] || "https://auth.bootic.net")
-      BOOTIC_API_URL  = (ENV['BOOTIC_API_URL'] || "https://api.bootic.net")
+      BOOTIC_API_URL  = (ENV['BOOTIC_API_URL'] || "https://api.bootic.net/v1")
       
       # Give your strategy a name.
       option :name, "Bootic"
