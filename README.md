@@ -1,20 +1,26 @@
 # OmniAuth Bootic
 
-This is the official OmniAuth strategy for authenticating to Bootic. Bootic's API is in alpha and not production ready.
+This is the official OmniAuth strategy for authenticating to Bootic. Bootic's API is in alpha and not production ready (coming soon).
+
+Please refer to the [Omniauth](https://github.com/intridea/omniauth) gem for more detail.
 
 ## Basic Usage
 
-    use OmniAuth::Builder do
-      provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET']
-    end
+```ruby
+use OmniAuth::Builder do
+  provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET']
+end
+```
 
 ### Scopes
 
 Bootic's API lets you set scopes to provide granular access to your Bootic data: 
 
-    use OmniAuth::Builder do
-      provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET'], scope: 'public,administrador,offline'
-    end
+```ruby
+use OmniAuth::Builder do
+  provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET'], scope: 'public,administrador,offline'
+end
+```
 
 ## License
 
