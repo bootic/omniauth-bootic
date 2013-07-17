@@ -9,6 +9,7 @@ module OmniAuth
       
       # Give your strategy a name.
       option :name, "Bootic"
+      option :provider_ignores_state, true
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
