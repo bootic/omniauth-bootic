@@ -18,7 +18,7 @@ Bootic's API lets you set scopes to provide granular access to your Bootic data:
 
 ```ruby
 use OmniAuth::Builder do
-  provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET'], scope: 'public,administrador,offline'
+  provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET'], scope: 'public,admin'
 end
 ```
 
