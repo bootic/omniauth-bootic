@@ -9,7 +9,7 @@ module OmniAuth
 
       # Give your strategy a name.
       option :name, "Bootic"
-      option :provider_ignores_state, true
+      option :provider_ignores_state, false
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
@@ -18,10 +18,6 @@ module OmniAuth
         authorize_url: "#{BOOTIC_AUTH_URL}/oauth/authorize",
         token_url: "#{BOOTIC_AUTH_URL}/oauth/token"
       }
-
-      def request_phase
-        super
-      end
 
       def authorize_params
         if request.params['scope']
