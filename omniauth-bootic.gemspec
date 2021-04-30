@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'omniauth', '~> 1.9'
-  s.add_dependency 'omniauth-oauth2', '~> 1.6'
+  s.add_dependency 'omniauth-oauth2', '~> 1.7'
   s.add_development_dependency 'rspec', '~> 2.7'
 end
