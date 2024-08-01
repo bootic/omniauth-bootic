@@ -7,7 +7,6 @@ module OmniAuth
       BOOTIC_AUTH_URL = (ENV['BOOTIC_AUTH_URL'] || "https://auth.bootic.net")
       BOOTIC_API_URL  = (ENV['BOOTIC_API_URL'] || "https://api.bootic.net/v1")
 
-      # Give your strategy a name.
       option :name, "Bootic"
       option :provider_ignores_state, false
 
@@ -32,11 +31,12 @@ module OmniAuth
       # additional calls (if the user id is returned with the token
       # or as a URI parameter). This may not be possible with all
       # providers.
-      uid{ raw_info['uid'].to_s }
+      uid { raw_info['uid'].to_s }
 
       info do
         {
-          name: raw_info['user_name'],
+          account_id: raw_info['account_id'],
+          name:  raw_info['user_name'],
           email: raw_info['email'],
           shops: raw_info['_embedded']['shops']
         }
