@@ -12,8 +12,6 @@ Gem::Specification.new do |s|
   s.summary     = %q{Official Omniauth strategy for Bootic apps}
   s.description = %q{Official Omniauth strategy for Bootic apps}
 
-  s.rubyforge_project = "omniauth-bootic"
-
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
