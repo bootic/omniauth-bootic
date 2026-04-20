@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "omniauth-bootic/version"
+require "omniauth-bolder/version"
 
 Gem::Specification.new do |s|
-  s.name        = "omniauth-bootic"
-  s.version     = Omniauth::Bootic::VERSION
+  s.name        = "omniauth-bolder"
+  s.version     = Omniauth::Bolder::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ismael Celis"]
   s.email       = ["ismael@bootic.net"]
   s.homepage    = ""
-  s.summary     = %q{Official Omniauth strategy for Bootic apps}
-  s.description = %q{Official Omniauth strategy for Bootic apps}
+  s.summary     = %q{Official Omniauth strategy for Bolder apps}
+  s.description = %q{Official Omniauth strategy for Bolder apps}
 
-  s.rubyforge_project = "omniauth-bootic"
+  s.rubyforge_project = "omniauth-bolder"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

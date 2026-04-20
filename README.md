@@ -1,6 +1,6 @@
-# OmniAuth Bootic
+# OmniAuth Bolder
 
-This is the official OmniAuth strategy for authenticating to Bootic. Bootic's API is in alpha and not production ready (coming soon).
+This is the official OmniAuth strategy for authenticating to Bolder. Bolder's API is in alpha and not production ready (coming soon).
 
 Please refer to the [Omniauth](https://github.com/intridea/omniauth) gem for more detail.
 
@@ -8,17 +8,17 @@ Please refer to the [Omniauth](https://github.com/intridea/omniauth) gem for mor
 
 ```ruby
 use OmniAuth::Builder do
-  provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET']
+  provider :bolder, ENV['BOLDER_KEY'], ENV['BOLDER_SECRET']
 end
 ```
 
 ### Scopes
 
-Bootic's API lets you set scopes to provide granular access to your Bootic data: 
+Bolder's API lets you set scopes to provide granular access to your Bolder data: 
 
 ```ruby
 use OmniAuth::Builder do
-  provider :bootic, ENV['BOOTIC_KEY'], ENV['BOOTIC_SECRET'], scope: 'public,admin'
+  provider :bolder, ENV['BOLDER_KEY'], ENV['BOLDER_SECRET'], scope: 'public,admin'
 end
 ```
 

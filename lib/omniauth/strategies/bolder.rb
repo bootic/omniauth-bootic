@@ -2,20 +2,20 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class Bootic < OmniAuth::Strategies::OAuth2
+    class Bolder < OmniAuth::Strategies::OAuth2
 
-      BOOTIC_AUTH_URL = (ENV['BOOTIC_AUTH_URL'] || "https://auth.bootic.net")
-      BOOTIC_API_URL  = (ENV['BOOTIC_API_URL'] || "https://api.bootic.net/v1")
+      BOLDER_AUTH_URL = (ENV['BOLDER_AUTH_URL'] || "https://auth.onbolder.com")
+      BOLDER_API_URL  = (ENV['BOLDER_API_URL'] || "https://api.onbolder.com/v1")
 
-      option :name, "Bootic"
+      option :name, "Bolder"
       option :provider_ignores_state, false
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
       option :client_options, {
-        site: BOOTIC_API_URL,
-        authorize_url: "#{BOOTIC_AUTH_URL}/oauth/authorize",
-        token_url: "#{BOOTIC_AUTH_URL}/oauth/token"
+        site: BOLDER_API_URL,
+        authorize_url: "#{BOLDER_AUTH_URL}/oauth/authorize",
+        token_url: "#{BOLDER_AUTH_URL}/oauth/token"
       }
 
       def authorize_params
@@ -56,4 +56,4 @@ module OmniAuth
   end
 end
 
-OmniAuth.config.add_camelization 'bootic', 'Bootic'
+OmniAuth.config.add_camelization 'bolder', 'Bolder'
